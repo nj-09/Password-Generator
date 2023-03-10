@@ -88,8 +88,12 @@ var upperCasedCharacters = [
   'Z'
 ];
 
-// Function to prompt user for password options
+
 function getPasswordOptions() {
+  var upperCase = confirm("Would you like to have uppercase letters?");
+  var lowerCase = confirm("Would you like to have lowercase letters?");
+  var special = confirm("Would you like to have special characters?");
+  var numeric = confirm("Would you like to have numbers?");
 
 }
 
@@ -100,6 +104,7 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
+// Loop method
 
 }
 
