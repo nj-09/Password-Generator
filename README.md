@@ -18,5 +18,7 @@ Link to deployed application: https://nj-09.github.io/Password-Generator/
 ## Resources used for guidance
 
 https://www.w3schools.com/jsref/jsref_join.asp
+
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
+
 https://www.programiz.com/javascript/recursion
