@@ -89,12 +89,30 @@ var upperCasedCharacters = [
 ];
 
 
+// 
 function getPasswordOptions() {
   var upperCase = confirm("Would you like to have uppercase letters?");
   var lowerCase = confirm("Would you like to have lowercase letters?");
   var special = confirm("Would you like to have special characters?");
   var numeric = confirm("Would you like to have numbers?");
+  var length = prompt("How many characters would you like to have?")
+  while(length>128 || length <8){
+    //repeat prompt
+    alert("Password length must be between 8 and 128 characters, please try again.");
+    length = prompt("How many characters would you like to have?");
+  }
+  // Code should validate for each input and at least one character type should be selected 
 
+
+
+
+
+  // If statement to verify if all of your confirms are false, and if so then it would recall the function if none of the prompts are selected
+  if (confirm) {
+    
+  } else {
+    
+  }
 }
 
 // Function for getting a random element from an array
