@@ -92,9 +92,25 @@ var upperCasedCharacters = [
 // 
 function getPasswordOptions() {
   var upperCase = confirm("Would you like to have uppercase letters?");
+  if (upperCase === true ) {
+    possibleCharacters.push(upperCasedCharacters);
+    passwordCharacters.push(getRandom(upperCasedCharacters));
+  }
   var lowerCase = confirm("Would you like to have lowercase letters?");
+  if (lowerCase === true ) {
+    possibleCharacters.push(lowerCasedCharacters);
+    passwordCharacters.push(getRandom(lowerCasedCharacters));
+  }
   var special = confirm("Would you like to have special characters?");
+  if (special === true ) {
+    possibleCharacters.push(specialCharacters);
+    passwordCharacters.push(getRandom(specialCharacters));
+  }
   var numeric = confirm("Would you like to have numbers?");
+  if (numeric === true ) {
+    possibleCharacters.push(numericCharacters);
+    passwordCharacters.push(getRandom(numericCharacters));
+  }
   var length = prompt("How many characters would you like to have?")
   while(length>128 || length <8){
     //repeat prompt
@@ -121,10 +137,31 @@ function getRandom(arr) {
 }
 
 // Function to generate password with user input
-function generatePassword() {
-// Loop method
+// function generatePassword() {}
+// Loop method?
 
+// For loops and then output the password
+//// --------- For loop to take in passwordCharacters --------- ////
+// 1st option
+for (let i = 0; i < passwordCharacters.length; i++) {
+  text += passwordCharacters[i] + "<br>";
 }
+
+// 2nd option
+for (let i = 0; index < passwordCharacters.length; i++) {
+  const element = passwordCharacters[i];
+  
+}
+
+//// --------- For loop to take in  possibleCharacters --------- ////
+for (let i = 0; i < possibleCharacters.length; i++) {
+  text += possibleCharacters[i] + "<br>";
+}
+
+
+
+
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
