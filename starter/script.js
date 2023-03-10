@@ -101,23 +101,23 @@ function getPasswordOptions() {
     alert("Password length must be between 8 and 128 characters, please try again.");
     length = prompt("How many characters would you like to have?");
   }
-  // Code should validate for each input and at least one character type should be selected 
 
-
-
-
-
-  // If statement to verify if all of your confirms are false, and if so then it would recall the function if none of the prompts are selected
-  if (confirm) {
-    
-  } else {
-    
+// If statement to verify if all of your confirms are false, and if so then it would recall the function if none of the prompts are selected
+//if all the confirm are true, run this function
+if (confirm) {
+  // code that runs the next step of the generating password here}
+  // if any of them are false, go to else, and run function again
+} else {
+  getPasswordOptions()
   }
 }
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-
+  function getRandom(arr) {
+    let randomIndex = Math.floor(Math.random() * arr.length);
+    return arr[randomIndex];
+  }
 }
 
 // Function to generate password with user input
