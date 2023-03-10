@@ -124,42 +124,24 @@ function getPasswordOptions() {
   // For loops and then output the password
 //// --------- For loop to take in passwordCharacters --------- ////
 var password = [];
-for (let i = 0; i < array.length; i++) {
-  var character = getRandom[possibleCharacters];
+for (let i = 0; i < length; i++) {
+  var character = getRandom(possibleCharacters);
   
   password.push(character);
   }
 
 //// --------- For loop to take in  possibleCharacters --------- ////
-for (let i = 0; i < array.length; i++) {
+for (let i = 0; i < passwordCharacters.length; i++) {
 password[i] = passwordCharacters[i];
   
   }
 
 console.log(password)
 
-// const finalPassword = ["length", "upperCase", "lowerCase", "specialCharacters"];
-let finalText = password.join();
+// Return the user's responses and joins the commas, into a string
+var finalResult = password.join("");
 
-return finalText
-
-// Return the user's responses
-// return {
-  // length: length,
-  // upperCase: upperCase,
- // lowerCase: lowerCase,
- // specialCharacters: specialCharacters,
-//  numericCharacters: numericCharacters
- // }
-
-        // Join the password without commas
-  // turns the array into a string
-  // return finalPassword let finalPassword = password.join('');
-
- // return finalPassword
-
-// Return the user's responses
-
+return finalResult;
 
 }
 // Function for getting a random element from an array
@@ -176,7 +158,7 @@ var generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var password = getPasswordOptions();
   var passwordText = document.querySelector('#password');
 
   passwordText.value = password;
@@ -187,7 +169,6 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
 
-// Add event listener to getPasswordOptions
-generateBtn.addEventListener("click", getPasswordOptions);
+
 
 
